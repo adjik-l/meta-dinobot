@@ -8,7 +8,7 @@ IMAGE_ROOTFS_SIZE ?= "589824"
 
 MACHINE_FEATURES += "emmc mmc"
 
-IMAGE_CMD_dinobotemmc_append = " \
+IMAGE_CMD:dinobotemmc:append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
 	if [ "${SDCARDIMG}" = "yes" ]; then \
 		mv -f ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.emmc.img ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${IMAGE_NAME}.sdcard.img; \
@@ -28,7 +28,7 @@ IMAGE_CMD_dinobotemmc_append = " \
 	rm -Rf ${IMAGEDIR}; \
 	"
 
-IMAGE_CMD_prepend = "\
+IMAGE_CMD:prepend = "\
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 

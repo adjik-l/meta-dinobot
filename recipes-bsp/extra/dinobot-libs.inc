@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-RDEPENDS_${PN} = "curl"
+RDEPENDS:${PN} = "curl"
 
 PV = "${SRCDATE}"
 
@@ -67,5 +67,4 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 do_package_qa() {
 }
 
-FILES_${PN} += "${libdir}/*"
-
+FILES:${PN} += "${libdir}/*"

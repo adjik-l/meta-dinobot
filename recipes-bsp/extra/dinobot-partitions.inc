@@ -31,5 +31,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/flash-apploader ${D}${sysconfdir}/init.d/flash-apploader
 }
 
-FILES_${PN} = "${datadir} ${sysconfdir}"
-
+FILES:${PN} = "${datadir} ${sysconfdir}"

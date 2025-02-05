@@ -1,3 +1,3 @@
 meta-dinobot
 ============
-BSP layer for dinobot
+BSP layer for dinobot opempli

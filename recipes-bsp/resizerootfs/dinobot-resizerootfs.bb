@@ -1,7 +1,7 @@
 DESCRIPTION = "Dinobot resize rootfs"
 require conf/license/license-gplv2.inc
 
-RDEPENDS_${PN} = "e2fsprogs-resize2fs"
+RDEPENDS:${PN} = "e2fsprogs-resize2fs"
 
 
 SRC_URI = "file://resizerootfs"

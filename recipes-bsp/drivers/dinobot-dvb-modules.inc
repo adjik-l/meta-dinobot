@@ -19,7 +19,7 @@ inherit update-rc.d
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-FILES_${PN} += "${nonarch_base_libdir}/modules/${KV}/extra ${bindir}/komession ${sysconfdir}/init.d ${sysconfdir}/modules-load.d"
+FILES:${PN} += "${nonarch_base_libdir}/modules/${KV}/extra ${bindir}/komession ${sysconfdir}/init.d ${sysconfdir}/modules-load.d"
 
 do_compile() {
 }
@@ -27,7 +27,7 @@ do_compile() {
 do_package_qa() {
 }
 
-do_install_prepend() {
+do_install:prepend() {
 	rm -f ${S}/tntfs.ko
 }
 

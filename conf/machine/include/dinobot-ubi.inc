@@ -5,7 +5,7 @@ IMAGE_FSTYPES += "ubi"
 MKUBIFS_ARGS = "-F -m 2048 -e 126976 -c 3840"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
-IMAGE_CMD_ubi_append = " \
+IMAGE_CMD:ubi:append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${MACHINE}/${IMAGEDIR}; \
 	mv -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${DEPLOY_DIR_IMAGE}/${MACHINE}/${IMAGEDIR}/${ROOTFS_FILE}; \
 	cp -f ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/${MACHINE}/${IMAGEDIR}/${KERNEL_FILE}; \
@@ -20,7 +20,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -Rf ${DEPLOY_DIR_IMAGE}/${MACHINE}; \
 	"
 
-IMAGE_CMD_ubifs_prepend = " \
+IMAGE_CMD:ubifs:prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 

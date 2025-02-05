@@ -1,4 +1,4 @@
-EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always"
+EXTRA_OECONF:append:pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always"
 
 SOC_FAMILY = "hisi3716mv410"
 HICHIPSET = "3716mv410"

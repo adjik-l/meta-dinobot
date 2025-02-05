@@ -2,7 +2,7 @@ SRCDATE = "20180427"
 
 KOFILES = "kds mali_kbase hi_dbe hi_tuner hi_sci hi_pmoc"
 
-do_install_append() {
+do_install:append() {
 	install -d ${D}${nonarch_base_libdir}/firmware/brcm
 	install -m 0644 ${S}/brcmfmac4339-sdio.bin ${D}${nonarch_base_libdir}/firmware/brcm
 	install -m 0644 ${S}/brcmfmac4339-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm

@@ -47,7 +47,6 @@ DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-spark --with-wma
 #PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink ?= "gstreamer1.0-plugin-dvbmediasink"
 
-DEPENDS_append_pn-enigma2 = " dinobot-libs-${MACHINETYPE} "
+DEPENDS:append:pn-enigma2 = " dinobot-libs-${MACHINETYPE} "
 
 BLINDSCAN_BINARY = "dinobot-blindscan"
-

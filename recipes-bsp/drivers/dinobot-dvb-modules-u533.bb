@@ -1,6 +1,6 @@
 SRCDATE = "20191212"
 
-do_install_append() {
+do_install:append() {
 	install -d ${D}${nonarch_base_libdir}/firmware/brcm
 	install -d ${D}${sysconfdir}/modules-load.d
 	install -m 0644 ${WORKDIR}/brcmfmac43455-sdio.bin ${D}${nonarch_base_libdir}/firmware/brcm
@@ -9,7 +9,7 @@ do_install_append() {
 	install -m 0644 ${WORKDIR}/*.conf ${D}${sysconfdir}/modules-load.d
 }
 
-FILES_${PN} += "${nonarch_base_libdir}/firmware/brcm"
+FILES:${PN} += "${nonarch_base_libdir}/firmware/brcm"
 
 require dinobot-dvb-modules2.inc
 

@@ -16,7 +16,7 @@ MACHINETYPE = "u57"
 
 SDCARDIMG = "no"
 
-MACHINE_FEATURES += "transcoding multitranscoding blindscan-dvbs 7segment hiaccel RCA textlcd skins1080"
+MACHINE_FEATURES += "transcoding blindscan dvb-c textlcd 7segment hiaccel RCA skins1080"
 
 STB_PLATFORM = "${MACHINETYPE}"
 

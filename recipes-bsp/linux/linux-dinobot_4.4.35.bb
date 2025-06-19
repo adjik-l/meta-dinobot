@@ -11,7 +11,8 @@ KERNEL_RELEASE = "${KERNELVERSION}"
 SRCDATE = "20180828"
 SRCDATE:dinobot4kse = "20180502"
 
-inherit kernel machine_kernel_pr samba_change_dialect
+inherit kernel machine_kernel_pr
+MACHINE_KERNEL_PR:append = "r4"
 
 SRC_URI[newgeneration.md5sum] = "f0dd43d5adc013d0dd89061e3249855a"
 SRC_URI[newgeneration.sha256sum] = "32a8caabfba94d81b649de8dd62cc5b02e1d750cad8d2676e98e242a944273a3"
@@ -22,8 +23,6 @@ SRC_URI[dinobot4kse.sha256sum] = "df83207ddfe34ac41a55e5e42eaae9c3ac3c4ef0750c78
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
 # package names instead, to allow only one kernel to be installed.
-PKG:${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-base"
-PKG:${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image"
 RPROVIDES:${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-${KERNEL_VERSION}"
 RPROVIDES:${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_VERSION}"
 
